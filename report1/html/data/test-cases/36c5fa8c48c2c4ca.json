@@ -1,0 +1,112 @@
+{
+  "uid" : "36c5fa8c48c2c4ca",
+  "name" : "test_a[data1]",
+  "fullName" : "test_a#test_a",
+  "historyId" : "9e6ef52480946d365505f60185d5348b",
+  "time" : {
+    "start" : 1602207508640,
+    "stop" : 1602207508640,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cmdopt",
+    "time" : {
+      "start" : 1602207508621,
+      "stop" : 1602207508621,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "fix_1",
+    "time" : {
+      "start" : 1602207508638,
+      "stop" : 1602207508638,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1602207508414,
+      "stop" : 1602207508621,
+      "duration" : 207
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ae36dda600f32437",
+      "name" : "stdout",
+      "source" : "ae36dda600f32437.txt",
+      "type" : "text/plain",
+      "size" : 42
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1,
+    "stepsCount" : 0,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_a"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-RVJBHD5J"
+  }, {
+    "name" : "thread",
+    "value" : "16124-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_a"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'用例编号': 2, '所属产品': '业务支撑平台', '所属模块': 'yunwei', '用例标题': '请求中不填写page参数', '前置条件': '账号已经登录', '请求类型': 'POST', '请求参数类': 'JSON', '请求参数': '{\"pageObj\":{\"size\":\"2\"}}', '预期结果': '', '实际结果': '', '备注': '', 'headers': '{\"x-zjaisino-auth-token\":{{token}}}', '是否运行': 'Y', '结果': '', '运行时间': ''}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "36c5fa8c48c2c4ca.json",
+  "parameterValues" : [ "{'用例编号': 2, '所属产品': '业务支撑平台', '所属模块': 'yunwei', '用例标题': '请求中不填写page参数', '前置条件': '账号已经登录', '请求类型': 'POST', '请求参数类': 'JSON', '请求参数': '{\"pageObj\":{\"size\":\"2\"}}', '预期结果': '', '实际结果': '', '备注': '', 'headers': '{\"x-zjaisino-auth-token\":{{token}}}', '是否运行': 'Y', '结果': '', '运行时间': ''}" ]
+}

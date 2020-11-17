@@ -1,0 +1,158 @@
+{
+  "9def8b0efd7baa2665871196d4306c53" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b0eb9a493cc62b77",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 2 == 1\n  +2\n  -1",
+      "time" : {
+        "start" : 1602494373751,
+        "stop" : 1602494373751,
+        "duration" : 0
+      }
+    } ]
+  },
+  "1c8dcca46f61e333c20acb3fc40fe2fd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b8615d90fb61c334",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 不在此次运行范围中,此次用例模块运行范围为['yunwei'],当前用例模块为/3.7发票管理/3.7.1发票分页查询",
+      "time" : {
+        "start" : 1602208526616,
+        "stop" : 1602208526616,
+        "duration" : 0
+      }
+    } ]
+  },
+  "9e6ef52480946d365505f60185d5348b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "316765a2ef2eb903",
+      "status" : "passed",
+      "time" : {
+        "start" : 1602208526624,
+        "stop" : 1602208526624,
+        "duration" : 0
+      }
+    } ]
+  },
+  "4de9a017efb641801d120e7c2f0a5afa" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aaae7ad3af923fce",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: 不在此次运行范围中,此次用例模块运行范围为['yunwei'],当前用例模块为/3.7发票管理/3.7.1发票分页查询",
+      "time" : {
+        "start" : 1602494683951,
+        "stop" : 1602494683951,
+        "duration" : 0
+      }
+    } ]
+  },
+  "bf63afb68e1d4aedd212f5f6e2f6700f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "875607ae80f21bde",
+      "status" : "passed",
+      "time" : {
+        "start" : 1605253624038,
+        "stop" : 1605253624039,
+        "duration" : 1
+      }
+    } ]
+  },
+  "e60f0c7c2e94077b5aebe591e28a1ed7" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7e487edd4482ac29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1605253624029,
+        "stop" : 1605253624029,
+        "duration" : 0
+      }
+    } ]
+  },
+  "5ed1ce6f75de53829f3cd9af6d46bed5" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a86fc6462188dd21",
+      "status" : "passed",
+      "time" : {
+        "start" : 1605253624047,
+        "stop" : 1605253624047,
+        "duration" : 0
+      }
+    } ]
+  },
+  "83835ebce9d4ae9affb4bf35d9d25732" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b631e719cfd7eb19",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 1 == 2\n  +1\n  -2",
+      "time" : {
+        "start" : 1602494695018,
+        "stop" : 1602494695018,
+        "duration" : 0
+      }
+    } ]
+  }
+}

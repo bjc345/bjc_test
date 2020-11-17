@@ -1,0 +1,98 @@
+{
+  "uid" : "5c80dcee5d20efd2",
+  "name" : "test_a[data0]",
+  "fullName" : "test_a#test_a",
+  "historyId" : "1c8dcca46f61e333c20acb3fc40fe2fd",
+  "time" : {
+    "start" : 1602207715715,
+    "stop" : 1602207715715,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Skipped: 不在此次运行范围中,此次用例模块运行范围为['yunwei'],当前用例模块为/3.7发票管理/3.7.1发票分页查询",
+  "statusTrace" : "('C:\\\\Users\\\\Lenovo\\\\PycharmProjects\\\\untitled4\\\\test_a.py', 12, \"Skipped: 不在此次运行范围中,此次用例模块运行范围为['yunwei'],当前用例模块为/3.7发票管理/3.7.1发票分页查询\")",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "fix_1",
+    "time" : {
+      "start" : 1602207715713,
+      "stop" : 1602207715713,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "cmdopt",
+    "time" : {
+      "start" : 1602207715712,
+      "stop" : 1602207715712,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1602207715423,
+      "stop" : 1602207715712,
+      "duration" : 289
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_a"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-RVJBHD5J"
+  }, {
+    "name" : "thread",
+    "value" : "22288-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_a"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'用例编号': 1, '所属产品': '业务支撑平台', '所属模块': '/3.7发票管理/3.7.1发票分页查询', '用例标题': '请求中不填写page参数', '前置条件': '账号已经登录', '请求类型': 'POST', '请求参数类': 'JSON', '请求参数': '{\"pageObj\":{\"size\":\"2\"}}', '预期结果': '', '实际结果': '', '备注': '', 'headers': '{\"x-zjaisino-auth-token\":{{token}}}', '是否运行': 'Y', '结果': '', '运行时间': ''}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5c80dcee5d20efd2.json",
+  "parameterValues" : [ "{'用例编号': 1, '所属产品': '业务支撑平台', '所属模块': '/3.7发票管理/3.7.1发票分页查询', '用例标题': '请求中不填写page参数', '前置条件': '账号已经登录', '请求类型': 'POST', '请求参数类': 'JSON', '请求参数': '{\"pageObj\":{\"size\":\"2\"}}', '预期结果': '', '实际结果': '', '备注': '', 'headers': '{\"x-zjaisino-auth-token\":{{token}}}', '是否运行': 'Y', '结果': '', '运行时间': ''}" ]
+}

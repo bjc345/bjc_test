@@ -1,0 +1,81 @@
+[ {
+  "uid" : "aaae7ad3af923fce",
+  "name" : "test_a[data0]",
+  "time" : {
+    "start" : 1602494683951,
+    "stop" : 1602494683951,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "316765a2ef2eb903",
+  "name" : "test_a[data1]",
+  "time" : {
+    "start" : 1602208526624,
+    "stop" : 1602208526624,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "875607ae80f21bde",
+  "name" : "test[data_dict1]",
+  "time" : {
+    "start" : 1605253624038,
+    "stop" : 1605253624039,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b8615d90fb61c334",
+  "name" : "test_a[data0]",
+  "time" : {
+    "start" : 1602208526616,
+    "stop" : 1602208526616,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "a86fc6462188dd21",
+  "name" : "test[data_dict2]",
+  "time" : {
+    "start" : 1605253624047,
+    "stop" : 1605253624047,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0eb9a493cc62b77",
+  "name" : "test_c",
+  "time" : {
+    "start" : 1602494373751,
+    "stop" : 1602494373751,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b631e719cfd7eb19",
+  "name" : "test_a[data1]",
+  "time" : {
+    "start" : 1602494695018,
+    "stop" : 1602494695018,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e487edd4482ac29",
+  "name" : "test[data_dict0]",
+  "time" : {
+    "start" : 1605253624029,
+    "stop" : 1605253624029,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
