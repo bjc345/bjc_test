@@ -1,4 +1,7 @@
 import pytest
+from utils import yamlUtil
+from config import conf
+from utils import RequestUtil
 # 注册自定义参数 cmdopt 到配置对象
 # def pytest_addoption(parser):
 #     parser.addoption("--cmdopt", action="store",
@@ -19,11 +22,17 @@ import pytest
 # @pytest.fixture(autouse=True)
 # def fix_3(cmdopt):
 #     print('fail')
-
+@pytest.fixture(scope="session",autouse=True)
+def init():
+    login_url=conf.ConfigYaml().get_conf_url()+"login"
+    print(login_url)
+    yield
+    print('完成')
 if __name__ == '__main__':
+    pass
     # 使用参数
     # pytest.main(['-s', '--cmdopt=c++','--setup-show'])
-    import os
-    root_path = os.path.abspath(os.getcwd())
-    a=os.listdir(root_path)
-    print(a)
+    # import os
+    # root_path = os.path.abspath(os.getcwd())
+    # a=os.listdir(root_path)
+    # print(a)

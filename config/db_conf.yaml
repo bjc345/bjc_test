@@ -1,0 +1,7 @@
+db1:
+  host: "116.62.132.208"
+  user: "root"
+  password: "Aisino123"
+  db_name: "db_cloud_devops"
+  charset: "utf8"
+  port: 13306
