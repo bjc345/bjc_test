@@ -34,7 +34,7 @@ class YamlReader:
                 f.write(result)
     def dump_dict_or_list(self,dict_or_list):
         with open(self.yamlf,encoding='utf8',mode='w') as f:
-            yaml.dump(dict_or_list,f,Dumper=yaml.RoundTripDumper)
+            yaml.dump(dict_or_list,f,Dumper=yaml.RoundTripDumper,allow_unicode=True)
 
 
 
