@@ -29,5 +29,6 @@ class ExcelReader:
         return self._data
 
 if __name__=="__main__":
-    print(ExcelReader('../case_data.xlsx',0).data())
+    print(ExcelReader('../case_new.xlsx',0).data())
+    
 

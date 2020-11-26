@@ -58,6 +58,12 @@ class ConfigYaml:
 
     def get_log_extention(self):
         return self.config['BASE']['log_extension']
+    def get_TestAdminName(self):
+        return self.config['BASE']['test']['AdminName']
+    def get_TestAdminPassWord(self):
+        return self.config['BASE']['test']['AdminPassWord']
+    def get_Testtoken(self):
+        return self.config['BASE']['test']['Authorization']
 
 
 
@@ -86,6 +92,6 @@ class ConfigYaml:
     def get_report_html(self):
         return self.config_TestCaseReport['filepath']['report_path']
 if __name__=="__main__":
-    print(ConfigYaml().get_report_data(),ConfigYaml().get_report_html())
+    print(ConfigYaml().get_TestAdminName(),ConfigYaml().get_TestAdminPassWord())
 
 

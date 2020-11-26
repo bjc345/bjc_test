@@ -2,6 +2,10 @@ import pytest
 from utils import yamlUtil
 from config import conf
 from utils import RequestUtil
+import jsonpath
+from utils import logUtil
+
+log_conftest=logUtil.mylog
 # 注册自定义参数 cmdopt 到配置对象
 # def pytest_addoption(parser):
 #     parser.addoption("--cmdopt", action="store",
@@ -22,14 +26,35 @@ from utils import RequestUtil
 # @pytest.fixture(autouse=True)
 # def fix_3(cmdopt):
 #     print('fail')
-@pytest.fixture(scope="session",autouse=True)
+
+
+
+@pytest.fixture(scope="session")
 def init():
-    login_url=conf.ConfigYaml().get_conf_url()+"login"
-    print(login_url)
-    yield
-    print('完成')
+    yaml_file=conf.get_config_file()
+    log_conftest().info("初始化token")
+    yamlUtil.YamlReader(yaml_file).dump("Authorization","")
+    log_conftest().info("清除token完成")
+    log_conftest().info("开始登录，获取token")
+    TestAdminName = conf.ConfigYaml().get_TestAdminName()
+    TestAdminPassWord = conf.ConfigYaml().get_TestAdminPassWord()
+    logindata = {"username": TestAdminName, "password": TestAdminPassWord}
+    login_url = conf.ConfigYaml().get_conf_url() + "adminLogin"
+    r = RequestUtil.Request().post(url=login_url, json=logindata)
+    log_conftest().info(f'获取成功,token为{jsonpath.jsonpath(r,"$..token")}')
+    log_conftest().info("替代测试token")
+    yamlUtil.YamlReader(yaml_file).dump("Authorization",jsonpath.jsonpath(r,"$..token"))
+    log_conftest().info("替代成功")
+    yield conf.ConfigYaml().get_Testtoken()
+    log_conftest().info("测试完成,清理token")
+    yamlUtil.YamlReader(yaml_file).dump("Authorization", "")
+    log_conftest().info("清除token完成")
 if __name__ == '__main__':
-    pass
+    import sys
+    a=1
+    b=a
+
+    print(sys.getrefcount(a))
     # 使用参数
     # pytest.main(['-s', '--cmdopt=c++','--setup-show'])
     # import os

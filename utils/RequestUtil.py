@@ -2,7 +2,7 @@ import  requests
 from config.conf import *
 from utils.yamlUtil import YamlReader
 class Request:
-    def requests_api(self,url,json=None,method='get',data=None,headers=None,**kwargs):
+    def requests_api(self,url,json=None,method='get',data=None,headers=None,file=[],**kwargs):
         if method=='get':
             r=requests.get(url=url,data=data,headers=headers,**kwargs)
         elif method=="post":
@@ -13,7 +13,7 @@ class Request:
 
         body=r.json()
 
-        body=r.text
+        # body=r.text
         res=dict()
         res['code']=code
         res['body']=body
