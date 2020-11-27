@@ -41,23 +41,13 @@ def init():
     logindata = {"username": TestAdminName, "password": TestAdminPassWord}
     login_url = conf.ConfigYaml().get_conf_url() + "adminLogin"
     r = RequestUtil.Request().post(url=login_url, json=logindata)
-    log_conftest().info(f'获取成功,token为{jsonpath.jsonpath(r,"$..token")}')
+    log_conftest().info(f'获取成功,token为{jsonpath.jsonpath(r,"$..token")[0]}')
     log_conftest().info("替代测试token")
-    yamlUtil.YamlReader(yaml_file).dump("Authorization",jsonpath.jsonpath(r,"$..token"))
+    yamlUtil.YamlReader(yaml_file).dump("Authorization",jsonpath.jsonpath(r,"$..token")[0])
     log_conftest().info("替代成功")
     yield conf.ConfigYaml().get_Testtoken()
     log_conftest().info("测试完成,清理token")
     yamlUtil.YamlReader(yaml_file).dump("Authorization", "")
     log_conftest().info("清除token完成")
 if __name__ == '__main__':
-    import sys
-    a=1
-    b=a
-
-    print(sys.getrefcount(a))
-    # 使用参数
-    # pytest.main(['-s', '--cmdopt=c++','--setup-show'])
-    # import os
-    # root_path = os.path.abspath(os.getcwd())
-    # a=os.listdir(root_path)
-    # print(a)
+    pass

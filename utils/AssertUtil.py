@@ -7,21 +7,22 @@ class AssertUtil:
     def assert_code(self,code,expect_code):
         try:
             assert int(code)==int(expect_code)
-            # return True
+            return True
         except:
             self.mylog.error('code状态码错误,code is {},expect_code is{}'.format(code,expect_code))
-            # raise
+            raise
     def assert_body(self,body,expect_body):
         try:
             assert body==expect_body
-            # return True
+            return True
         except:
             self.mylog.error('body值错误,body is {},expect_body is{}'.format(body,expect_body))
-            # raise
+            raise
     def assert_in_body(self,body,expect_body):
         try:
             body=format_cn_res(body)
             assert expect_body in body
-            # return True
+            return True
         except:
             self.mylog.error('不包含body或者body错误,body is {},expect_body is{}'.format(body,expect_body))
+            raise

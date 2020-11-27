@@ -6,7 +6,81 @@
   上传文件路径: ''
   依赖数据: ''
   请求数据: '{"username":"admin","password":"aaaaaaaaaa"}'
-  code校验: $..retCode==200
+  code校验: $..retCode==555554
   是否执行: yes
   是否需要token: no
+  是否需要上传文件: no
+- 用例编号: case_2
+  用例标题: 正确的账号，正确的密码
+  接口地址: adminLogin
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: ''
+  请求数据: '{"username":"admin","password":"Aisino123"}'
+  code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: no
+  是否需要上传文件: no
+- 用例编号: case_3
+  用例标题: 成功添加培训信息
+  接口地址: train/addTrain
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: ''
+  请求数据: '{"trainName":"1","hostDepartment":"吧哈哈","trainLocation":"123123","trainTime":"2020-11-27
+    10:18:00","trainDuration":"11","trainAmount":"1","codeGoodsName":"培训费","issuer":"刘晶晶","remark":"","departmentId":1,"goodsId":1}'
+  code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_4
+  用例标题: 添加培训信息-不传入培训名称
+  接口地址: train/addTrain
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: ''
+  请求数据: '{"hostDepartment":"吧哈哈","trainLocation":"123123","trainTime":"2020-11-27
+    10:18:00","trainDuration":"11","trainAmount":"1","codeGoodsName":"培训费","issuer":"刘晶晶","remark":"","departmentId":1,"goodsId":1}'
+  code校验: $..retCode==555552
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_5
+  用例标题: 添加培训信息-不传入主办科室
+  接口地址: train/addTrain
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: ''
+  请求数据: '{"trainName":"1","trainLocation":"123123","trainTime":"2020-11-27 10:18:00","trainDuration":"11","trainAmount":"1","codeGoodsName":"培训费","issuer":"刘晶晶","remark":"","departmentId":1,"goodsId":1}'
+  code校验: $..retCode==555552
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_6
+  用例标题: 查询所有的培训信息
+  接口地址: train/listPage
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: ''
+  请求数据: '{}'
+  code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_7
+  用例标题: 查询一条培训信息的详情
+  接口地址: train/selectTrain
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: case_6-$..records[0].trainCode
+  请求数据: '{"trainCode":"case_6-$..records[0].trainCode"}'
+  code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: yes
   是否需要上传文件: no

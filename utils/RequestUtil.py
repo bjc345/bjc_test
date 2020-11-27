@@ -4,7 +4,7 @@ from utils.yamlUtil import YamlReader
 class Request:
     def requests_api(self,url,json=None,method='get',data=None,headers=None,file=[],**kwargs):
         if method=='get':
-            r=requests.get(url=url,data=data,headers=headers,**kwargs)
+            r=requests.get(url=url,params=data,headers=headers,**kwargs)
         elif method=="post":
             r=requests.post(url=url,json=json,headers=headers,**kwargs)
 
@@ -18,8 +18,8 @@ class Request:
         res['code']=code
         res['body']=body
         return res
-    def get(self,url,**kwargs):
-        return self.requests_api(url=url,method='get',**kwargs)
+    def get(self,url,data=None,**kwargs):
+        return self.requests_api(url=url,data=data,method='get',**kwargs)
 
     def post(self,url,json=None,**kwargs):
         return self.requests_api(url=url,method='post',json=json,**kwargs)
