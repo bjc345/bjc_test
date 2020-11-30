@@ -6,7 +6,7 @@
   上传文件路径: ''
   依赖数据: ''
   请求数据: '{"username":"admin","password":"aaaaaaaaaa"}'
-  code校验: $..retCode==555554
+  code校验: $..retCode==555553
   是否执行: yes
   是否需要token: no
   是否需要上传文件: no
@@ -81,6 +81,68 @@
   依赖数据: case_6-$..records[0].trainCode
   请求数据: '{"trainCode":"case_6-$..records[0].trainCode"}'
   code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_8
+  用例标题: 成功修改一条培训信息
+  接口地址: train/updateTrain
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: case_6-$..records[0].trainCode
+  请求数据: '{"goodsId":11,"issuer":"刘艳映","codeGoodsName": "015培训费","trainCode":"case_6-$..records[0].trainCode","trainName":"发挥中医护理特色","hostDepartment":"护理一科","trainLocation":"护理二楼201室","trainTime":1588129705000,"trainDuration":2,"trainStatus":0,"trainAmount":10000.00,"remark":
+    "备注"}'
+  code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_9
+  用例标题: 修改培训状态信息-不填写培训编号
+  接口地址: train/updateTrainStatus
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: ''
+  请求数据: '{"trainStatus":1}'
+  code校验: $..retCode==555552
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_10
+  用例标题: 修改培训状态信息-不填写培训状态
+  接口地址: train/updateTrainStatus
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: case_6-$..records[0].trainCode
+  请求数据: '{"trainCode":"case_6-$..records[0].trainCode"}'
+  code校验: $..retCode==555552
+  是否执行: no
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_11
+  用例标题: 成功修改培训状态信息
+  接口地址: train/updateTrainStatus
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: case_6-$..records[0].trainCode
+  请求数据: '{"trainCode":"case_6-$..records[0].trainCode","trainStatus":2}'
+  code校验: $..retCode==000000
+  是否执行: yes
+  是否需要token: yes
+  是否需要上传文件: no
+- 用例编号: case_12
+  用例标题: 修改一条培训信息-修改的培训为已经下架的
+  接口地址: train/updateTrain
+  请求方式: post
+  文件对象的参数名: ''
+  上传文件路径: ''
+  依赖数据: case_6-$..records[0].trainCode
+  请求数据: '{"goodsId":11,"issuer":"刘艳映","codeGoodsName": "015培训费","trainCode":"case_6-$..records[0].trainCode","trainName":"发挥中医护理特色","hostDepartment":"护理一科","trainLocation":"护理二楼201室","trainTime":1588129705000,"trainDuration":2,"trainStatus":0,"trainAmount":10000.00,"remark":
+    "备注"}'
+  code校验: $..retCode==555552
   是否执行: yes
   是否需要token: yes
   是否需要上传文件: no

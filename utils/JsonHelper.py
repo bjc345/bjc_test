@@ -11,4 +11,5 @@ def decode(data):
 
 
 if __name__=="__main__":
-    pass
+    a=decode('{"goodsId":11,"issuer":"刘艳映","codeGoodsName": "015培训费","trainCode":"case_6-$..records[0].trainCode","trainName":"发挥中医护理特色","hostDepartment":"护理一科","trainLocation":"护理二楼201室","trainTime":1588129705000,"trainDuration":2,"trainStatus":0,"trainAmount":10000.00,"remark": "备注"}')
+    print(a)
