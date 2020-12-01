@@ -142,7 +142,7 @@
   依赖数据: case_6-$..records[0].trainCode
   请求数据: '{"goodsId":11,"issuer":"刘艳映","codeGoodsName": "015培训费","trainCode":"case_6-$..records[0].trainCode","trainName":"发挥中医护理特色","hostDepartment":"护理一科","trainLocation":"护理二楼201室","trainTime":1588129705000,"trainDuration":2,"trainStatus":0,"trainAmount":10000.00,"remark":
     "备注"}'
-  code校验: $..retCode==555552
+  code校验: $..retCode==555566
   是否执行: yes
   是否需要token: yes
   是否需要上传文件: no

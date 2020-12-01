@@ -56,6 +56,8 @@ class Test:
             linkeddataUtil.LinkedUtil().save_result(case_id, res)
             mylog.warning(f"用例保存成功，对应的case_id为{case_id},对应的response_body为{res}")
             AssertUtil.AssertUtil().assert_code(*getCodeUtil.getCodeUtil.getcode_tuple(res,case_checkcode))
+
+    @pytest.mark.flaky(reruns=3, reruns_delay=1)
     @pytest.mark.parametrize("case_dict",another_case)
     def test_another(self,init,case_dict):
         case_id=case_dict["用例编号"]
