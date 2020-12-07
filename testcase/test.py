@@ -85,7 +85,7 @@ class Test:
             mylog.warning(f"用例编号为{case_id},用例标题为:[{case_title}的用例，因为是否执行状态的值为{case_isrun}],此次执行结果为skip")
             pytest.skip(f"用例的是否执行值为{case_isrun}")
         if (case_isputfile =="no") and  case_sendtype=="post":
-            mylog.warning(f"开始测试数据,此次获取到的用例id为{case_id},获取到的请求体为{case_senddata}")
+            mylog.warning(f"开始测试数据,此次获取到的用例id为{case_id},获取到的请求体为{case_senddata},请求的header为{case_header}")
             res=RequestUtil.Request().post(case_url,json=JsonHelper.decode(case_senddata),headers=case_header)
             print(getCodeUtil.getCodeUtil.getcode_tuple(res,case_checkcode))
             mylog.warning(f"用例id为{case_id}的用例执行完毕，开始存储用例直接list中")
@@ -95,7 +95,7 @@ class Test:
         else:
             mylog.warning(f"开始测试数据,此次获取到的用例id为{case_id}")
             res = RequestUtil.Request().get(case_url, data=JsonHelper.decode(case_senddata))
-            print(getCodeUtil.getCodeUtil.getcode_tuple(res, case_checkcode))
+
             mylog.warning(f"用例id为{case_id}的用例执行完毕，开始存储用例直接list中")
             linkeddataUtil.LinkedUtil().save_result(case_id, res)
             mylog.warning(f"用例保存成功，对应的case_id为{case_id},对应的response_body为{res}")
